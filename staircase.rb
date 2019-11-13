@@ -5,11 +5,11 @@ require 'stringio'
 
 # Complete the staircase function below.
 def staircase(n)
-  i=1
+  space=1
   
-  while (i <= n) do
-    puts " " * (n-i) + "#" * i
-    i += 1
+  while (space <= n) do
+    puts " " * (n - space) + "#" * space
+    space += 1
   end
 end
 
