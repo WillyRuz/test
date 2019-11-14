@@ -4,7 +4,7 @@
     return unless session_id
       chat_session = Chat::Session.find_by(session_id: session_id, state: %w[waiting running]) if session_id
       return unless chat_session
-        if chat_session.state == 'running'
+        return unless chat_session.state == 'running'
           user = nil
           return unless chat_session.user_id
             return unless chat_user.image && chat_user.image != 'none'
@@ -12,27 +12,26 @@
               url = nil
               url = "#{Setting.get('http_type')}://#{Setting.get('fqdn')}/api/v1/users/image/#{chat_user.image}"
 
-        end
-            user = {
+              user = {
               name:   chat_user.fullname,
               avatar: url,
             }
     # get queue position if needed
     session = Chat::Session.messages_by_session_id(session_id)
     return unless session
-      return {
+      {
           state:   'reconnect',
           session: session,
           agent:   user,
       }
 
-      if chat_session.state == 'waiting'
-        return {
+      return unless chat_session.state == 'waiting'
+        {
           state:    'reconnect',
           position: chat_session.position,
         }
-      end
   end
+
 
   def agents_available?
 
