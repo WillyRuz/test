@@ -8,4 +8,4 @@ def num_positives(numbers)
   new_numbers
 end
 
-num_positives([-1, 20, 4])
+num_positives([-1, 20, 4, 15])
