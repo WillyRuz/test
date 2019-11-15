@@ -1,0 +1,18 @@
+def mult(nums)
+  arr = [nums]
+  arr_2 = []
+  aux = 0
+  aux1= 1
+
+  while aux <= arr.size do
+    arr_2.push(arr.collect{|i| i == aux1})
+    aux += 1
+    aux1 += 1
+
+  end
+  puts aux
+  puts aux1
+  arr_2
+
+end
+mult([1,2,3,4])
