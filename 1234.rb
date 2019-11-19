@@ -1,13 +1,11 @@
 def mult(nums)
-  array = []
-  array2 = []
-  aux= nums.first
+  numbers_list = []
   
-  while aux <= nums.size do
-  array2.push(nums.inject(:*)/aux)
-  aux += 1
+  nums.each do |iterator|
+    numbers_list.push(nums.inject(:*)/iterator)
   end
-  array2
+
+  numbers_list
 end
 
-mult([1,2,3,4])
+mult([1, 2, 3, 4])
