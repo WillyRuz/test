@@ -6,12 +6,12 @@ class Dictionary
     words_es = { departamento: 'apartement', inquilino: ' tenant', propietario: 'owner', renta: 'rent' }
 
     unless language.downcase == 'español'
-      return puts words_es.fetch(word.downcase)
+      words_es.fetch(word.downcase)
     end
 
-    puts words_en.fetch(word.downcase)
+    words_en.fetch(word.downcase)
   end
 end
 
 new = Dictionary.new
-new.translate('ENGLISH', :INQUILINO)
+new.translate('español', :rent)
