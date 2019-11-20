@@ -3,26 +3,26 @@ class Car
   @on = 0
   @off = 0
 
-  def turn_on
+  def self.turn_on
     puts 'The engine has been started'
     @on = 1
   end
 
-  def start_travel
-    raise StandardError, 'You have to start the engine first' if @on != 1
+  def self.start_travel
+    raise StandardError, 'You have to start the engine first' unless @on == 1
 
     puts 'Travel has started'
     @off = 1
   end
 
-  def end_travel
-    raise StandardError, 'You have to start the travel first' if @off != 1
+  def self.end_travel
+    raise StandardError, 'You have to start the travel first' unless @off == 1
 
     puts 'Travel has ended'
   end
 end
 
-travel = Car.new
-travel.turn_on
-travel.start_travel
-travel.end_travel
+
+Car.turn_on
+Car.start_travel
+Car.end_travel
