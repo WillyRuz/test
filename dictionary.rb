@@ -1,7 +1,7 @@
 class Dictionary
   attr_accessor :language, :word
 
-  def translate(language, word)
+  def self.translate(language, word)
     words_en = {
       department: 'departamento',
       tenant: 'inquilino',
@@ -16,12 +16,11 @@ class Dictionary
     }
 
     if language.downcase != 'español'
-      return puts words_es.fetch(word.downcase)
+      return puts words_es.fetch(word.downcase.to_sym)
     end
 
-    puts words_en.fetch(word.downcase)
+    puts words_en.fetch(word.downcase.to_sym)
   end
 end
 
-new = Dictionary.new
-new.translate('ENGLISH', :renta)
+Dictionary.translate('ENGLISH', 'renta')
