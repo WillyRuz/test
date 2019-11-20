@@ -16,11 +16,11 @@ class Dictionary
     }
 
     if language.downcase != 'español'
-      return puts words_es.fetch(word.downcase.to_sym)
+      return words_es.fetch(word.downcase.to_sym)
     end
 
-    puts words_en.fetch(word.downcase.to_sym)
+      words_en.fetch(word.downcase.to_sym)
   end
 end
 
-Dictionary.translate('ENGLISH', 'renta')
+puts Dictionary.translate('ENGLISH', 'renta')
