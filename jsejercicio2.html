@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<h2 id="text-h2"> </h2>
+<input type="text" id="word">
+<button type="button" onclick="printWord()">Click Me!</button>
+
+<script type="text/javascript">
+  function printWord() {
+    const inputWord = document.getElementById("word").value;
+    document.getElementById("text-h2").innerHTML = inputWord; 
+  };
+</script>
+</body>
+</html>
