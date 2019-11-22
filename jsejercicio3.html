@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<h2 id="text-h2"> </h2>
+<input type="text" id="number1">
+<input type="text" id="number2">
+<br>
+<button type="button" onclick="add()">Add</button>
+<button type="button" onclick="substraction()">Substraction</button>
+<button type="button" onclick="multiply()">Multiply</button>
+<button type="button" onclick="division()">Division</button>
+<p id="result"> </p>
+<p id="message"> </p>
+<script type="text/javascript">
+  var result = 0;
+  var num1 = parseInt(document.getElementById("number1").value);
+  var num2 = parseInt(document.getElementById("number2").value);
+
+  function add() {
+    isEmpty();
+    document.getElementById("result").innerHTML = result = num1+num2;
+  };
+
+  function substraction() {
+    var num1 = parseInt(document.getElementById("number1").value);
+    var num2 = parseInt(document.getElementById("number2").value);
+    document.getElementById("result").innerHTML = result = num1-num2;      
+  };
+
+  function multiply() {
+    var num1 = parseInt(document.getElementById("number1").value);
+    var num2 = parseInt(document.getElementById("number2").value);
+    document.getElementById("result").innerHTML = result = num1*num2;     
+  };
+
+  function division() {
+    var num1 = parseInt(document.getElementById("number1").value);
+    var num2 = parseInt(document.getElementById("number2").value);
+    if (num2==0){document.getElementById("result").innerHTML="Division by ZERO impossibru"}
+    else{document.getElementById("result").innerHTML = result = num1/num2;}     
+  };
+
+  function isEmpty(){
+    if (num1!="" || num2!="") 
+    return document.getElementById("message").innerHTML = "You must place a number in the box";
+    
+  };
+
+</script>
+</body>
+</html>
