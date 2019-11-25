@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <title>Movies</title>
+</head>
+
+<body>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.19.0/axios.min.js"></script>
+  <script type="text/javascript">
+    const type = "dracula";
+    const queryURL = "http://www.omdbapi.com/?t=" + type + "&y=&plot=short&apikey=40e9cece";
+    axios({
+      url: queryURL,
+      method: 'get'
+    })
+    ;(async () => {
+      const response = await axios({
+      url: queryURL,
+      method: 'get'
+
+    })
+
+  console.log(response)
+  var movie = document.getElementById('js-table');
+  movie.insertAdjacentHTML('beforeend', '<td>'+ response.data.Title+'</td>')
+
+  var year = document.getElementById('js-table');
+  year.insertAdjacentHTML('beforeend', '<td>'+ response.data.Year+'</td>')
+
+  var actors = document.getElementById('js-table');
+  actors.insertAdjacentHTML('beforeend', '<td>'+ response.data.Actors+'</td>')
+})()
+  </script>
+  <div class="container">
+    <h2>Basic Table</h2>
+    <p>The .table class adds basic styling (light padding and only horizontal dividers) to a table:</p>
+    <table class="table">
+      <thead>
+        <tr>
+          <th>Movie Name</th>
+          <th>Year</th>
+          <th>Actors</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr id="js-table">
+        </tr>
+      </tbody>
+    </table>
+  </div>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+</body>
+</html>
