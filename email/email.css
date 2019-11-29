@@ -1,0 +1,99 @@
+@font-face {
+  font-family: Avenie;
+  src: url('AvenirNextLTPro-MediumCn .otf');
+}
+.flex-container{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-family: 'Avenie';
+}
+
+.container-header{
+  display: flex;
+  justify-content: center;
+}
+
+.container-img{
+  display: flex;
+  justify-content: center;
+  margin-bottom: 35px;
+}
+
+.container-div-center{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  color: #666666;
+  font-size: 20px;
+  width: 548px;
+}
+
+button{
+  color: #8D7AFF;
+  background-color: white;
+  border: 2px solid #8D7AFF;
+  font-size: 16px;
+  padding: 9px 80px;
+  border-radius: 1%;
+}
+
+.container-bottom{
+  display: flex;
+  flex-direction: row;
+  color: #434343;
+  font-size: 16px;
+  width: 764px;
+  height: 299px;
+  justify-content: center;
+}
+
+.container-left{
+  display: flex;
+  flex-direction: column;
+  width: 38.33%;
+  justify-content: center;
+  align-items: center;
+
+}
+
+.container-center{
+  display: flex;
+  flex-direction: column;
+  width: 39.33%;
+  justify-content: center;
+  align-items: center;
+}
+
+.container-right{
+  display: flex;
+  flex-direction: column;
+  width: 31.33%;
+  justify-content: center;
+  align-items: center;
+}
+
+.image{
+  height: 167px;
+  width: 184px;
+}
+
+.space{
+  margin-bottom: 29px;
+  text-align: center;
+}
+
+.font1{
+  color: #666666;
+}
+
+.font2{
+  font-size: 23px;
+  color: #666666;
+}
+
+u{
+  color: #8D7AFF;
+}
