@@ -1,0 +1,87 @@
+@font-face {
+  font-family: Avenie;
+  src: url('AvenirNextLTPro-MediumCn .otf');
+}
+.flex-container{
+  display: flex;
+  width: 1084px;
+  height: 302px;
+  border: 1px solid lightgray;
+  margin: 200px;
+  align-items: flex-start;
+  flex-direction: row;
+  margin-left: 150px;
+  margin-right: 150px;
+  border-radius: 6px;
+  font-family: 'Avenie';
+}
+
+.flex-right{
+  height: 302px;
+  width: 441px;
+  flex-direction: column;
+}
+
+.flex-left{
+  height: 302px;
+  width: 1604px;
+  overflow: hidden;
+  background:url("building.jpg")no-repeat left -451px;
+}
+.desde{
+  padding-top: 34px;
+  font-size: 10px;
+  color: gray;
+  padding-left: 20px;
+}
+
+.flex-delegacion{
+  font-size: 14px;
+  color: #999;
+  padding-top: 6px;
+  padding-left: 20px;
+}
+
+.flex-item{
+  width: 200px;
+  height: 150px;
+}
+
+.flex-div{
+  color: #999;
+  font-size: 15px;
+  height: 104px;
+  width: 264px;
+  padding-left: 20px;
+  padding-top: 19px;
+  padding-right: 20px;
+  overflow: hidden;
+}
+
+.title{
+  text-align: center;
+  margin-top: 52px;
+  margin-bottom: -150px;
+  font-size: 36px;
+  font-weight: 300;
+  color: #333;
+}
+
+.flex-price{
+  font-size: 19px;
+  padding-left: 20px;
+}
+
+.flex-colonia{
+  font-size: 19px;
+  color: #2a63cb;
+  height: 23px;
+  padding-left: 20px;
+  padding-top: 29px;
+  font-weight: bold;
+  overflow: hidden;
+}
+.flex-image{
+  width: 300px;
+  height: 350px;
+}
