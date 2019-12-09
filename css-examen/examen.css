@@ -1,0 +1,133 @@
+.main-container{
+  display: flex;
+  flex-direction: column;
+  font-family: "Open Sans", sans-serif;
+  align-items: center;
+}
+
+.title{
+  font-size: 18px;
+  color: rgb(74, 74, 74);
+  margin-bottom: 22px;
+}
+
+.container-border{
+  display: flex;
+  flex-direction: column;
+  width: 300px;
+  box-shadow: rgba(0, 0, 0, 0.5) 0px 1px 2px 0px;
+  height: 500px;
+  background-color: rgb(249, 249, 249);
+}
+
+.payment{
+  display: flex;
+  flex-direction: row;
+  color: rgb(74, 74, 74);
+  font-size: 16px;
+  margin-top: 11px;
+  margin-bottom: 22px;
+}
+
+.brand{
+  display: flex;
+  flex-direction: row;
+  width: 307px;
+  margin-bottom: 30px;
+}
+
+.image1{
+  align-self: center;
+  text-align: -webkit-center;
+}
+
+.image2{
+    align-self: center;
+}
+
+.image3{
+  align-self: center;
+}
+
+.image1 > img{
+  border: 1px solid rgb(204, 204, 204);
+  border-radius: 4px;
+  width: 90%;
+  margin-left: -82px;
+  margin-right: -80px;
+}
+
+.image2 > img{
+  border: 1px solid rgb(204, 204, 204);
+  border-radius: 4px;
+  width: 77%;
+  margin-right: -117px;
+  margin-left: 10px;
+}
+
+.image3 > img{
+  width: 76%;
+  margin-right: -71px;
+  margin-left: 13px;
+  border: 1px solid rgb(204, 204, 204);
+  border-radius: 4px;
+}
+
+.mid-container{
+  display: flex;
+  flex-direction: row;
+  margin-bottom: 18px;
+  margin-left: -9px;
+  margin-right: 11px;
+  place-content: space-between;
+}
+
+.mid-content{
+  display: flex;
+  flex-direction: column;
+  width: 100px;
+  margin-left: 26px;
+  margin-right: 24px;
+}
+
+.inpt{
+  width: 113px;
+  height: 30px;
+  border: 1px solid rgb(204, 204, 204);
+  border-radius: 3%;
+}
+
+.inpt1{
+  width: 113px;
+  height: 30px;
+  border: 1px solid rgb(204, 204, 204);
+  border-radius: 3%;
+}
+
+.inpt2{
+  width: 266px;
+  height: 30px;
+  margin-left: 14px;
+  border: 1px solid rgb(204, 204, 204);
+  border-radius: 3%;
+}
+
+.line{
+  margin-bottom: 18px;
+}
+
+.bottom{
+  display: flex;
+  flex-direction: row;
+  margin-left: 44px;
+  font-size: 16px;
+}
+
+.label{
+  margin-left: 14px;
+  font-size: 14px;
+}
+
+.mid-label{
+  font-size: 14px;
+}

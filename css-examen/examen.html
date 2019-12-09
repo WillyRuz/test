@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <link rel="stylesheet" type="text/css" href="examen.css">
+  <title></title>
+</head>
+<body>
+  <script type="text/javascript">
+    function visa(){
+      
+    }
+
+    function mastercard(){
+
+    }
+
+    function amex(){
+
+    }
+
+  </script>
+    <div class="main-container">
+      <div class="title">Elige tu forma de pago</div>
+      <div class="container-border">
+        <div class="payment">
+          <div><img src="dot.png"></div>
+          <div>Tarjeta de crédito o débito</div>
+        </div>
+        <div class="brand">
+          <div class="image1" onclick="visa();"><img src="visa.png"></div>
+          <div class="image2" onclick="mastercard();"><img src="mastercard.png"></div>
+          <div class="image3" onclick="amex();"><img src="amex.png"></div>
+        </div>
+        <div class="line">
+          <div class="label">Nombre completo</div>
+          <div><input class="inpt2" type="text" name="name" placeholder="Nombre"></div>
+        </div>
+        <div class="mid-container">
+          <div class="mid-content">
+            <div class="mid-label">Vigencia</div>
+            <div class="inpt"><input class="inpt" type="text" name="date" placeholder="mm/aa"></div>
+          </div>
+          <div class="mid-content">
+           <div class="mid-label">CVC</div>
+            <div class="inpt1"><input class="inpt" type="text" name="cvc" placeholder="_"></div>
+          </div>
+        </div>
+        <div class="line">
+          <div class="label">Número tarjeta</div>
+          <div><input class="inpt2" type="text" name="card_number" placeholder="_______"></div>
+        </div>
+        <div class="line">
+          <div class="label">Código postal</div>
+          <div><input class="inpt2" type="text" name="postal_Code" placeholder="_____"></div>
+        </div>
+        <div class="bottom">
+          <input type="checkbox" name="save_card">
+          <div>Guardar tarjeta</div>
+        </div>
+      </div>  
+    </div>
+
+</body>
+</html>
