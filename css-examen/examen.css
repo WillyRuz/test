@@ -8,7 +8,7 @@
 .title{
   font-size: 18px;
   color: rgb(74, 74, 74);
-  margin-bottom: 22px;
+  margin-bottom: 15px;
 }
 
 .container-border{
@@ -16,10 +16,22 @@
   flex-direction: column;
   width: 300px;
   box-shadow: rgba(0, 0, 0, 0.5) 0px 1px 2px 0px;
-  height: 500px;
+  height: auto;
   background-color: rgb(249, 249, 249);
+  margin-top: -16px;
+  padding-top: 14px;
+  border-radius: 1%;
 }
 
+.top-container{
+  display: flex;
+  flex-direction: column;
+  width: 300px;
+  box-shadow: rgba(0, 0, 0, 0.5) 0px 1px 2px 0px;
+  height: auto;
+  background-color: white;
+  border-radius: 1%;
+}
 .payment{
   display: flex;
   flex-direction: row;
@@ -27,6 +39,7 @@
   font-size: 16px;
   margin-top: 11px;
   margin-bottom: 22px;
+  margin-left: 10px;
 }
 
 .brand{
@@ -40,6 +53,17 @@
   align-self: center;
   text-align: -webkit-center;
 }
+.img1:active, .img1:focus{
+  border: 2px solid rgb(141, 122, 255);
+}
+
+.img2:active, .img2:focus{
+  border: 2px solid rgb(141, 122, 255);
+}
+
+.img3:active, .img3:focus{
+  border: 2px solid rgb(141, 122, 255);
+}
 
 .image2{
     align-self: center;
@@ -52,7 +76,7 @@
 .image1 > img{
   border: 1px solid rgb(204, 204, 204);
   border-radius: 4px;
-  width: 90%;
+  width: 58%;
   margin-left: -82px;
   margin-right: -80px;
 }
@@ -60,13 +84,13 @@
 .image2 > img{
   border: 1px solid rgb(204, 204, 204);
   border-radius: 4px;
-  width: 77%;
+  width: 78%;
   margin-right: -117px;
   margin-left: 10px;
 }
 
 .image3 > img{
-  width: 76%;
+  width: 56%;
   margin-right: -71px;
   margin-left: 13px;
   border: 1px solid rgb(204, 204, 204);
@@ -91,10 +115,12 @@
 }
 
 .inpt{
-  width: 113px;
+  width: 112px;
   height: 30px;
   border: 1px solid rgb(204, 204, 204);
   border-radius: 3%;
+  padding-left: 16px;
+  font-size: 15px;
 }
 
 .inpt1{
@@ -102,14 +128,16 @@
   height: 30px;
   border: 1px solid rgb(204, 204, 204);
   border-radius: 3%;
+  padding-left: 16px;
 }
 
 .inpt2{
-  width: 266px;
+  width: 253px;
   height: 30px;
   margin-left: 14px;
   border: 1px solid rgb(204, 204, 204);
   border-radius: 3%;
+  padding-left: 16px;
 }
 
 .line{
@@ -119,9 +147,16 @@
 .bottom{
   display: flex;
   flex-direction: row;
-  margin-left: 44px;
-  font-size: 16px;
+  margin-left: 16px;
+  font-size: 17px;
+  border: 1px solid rgb(204, 204, 204);
+  border-radius: 3%;
+  width: 265px;
+  height: 34px;
+  place-items: center;
+  margin-bottom: 20px
 }
+
 
 .label{
   margin-left: 14px;
@@ -130,4 +165,119 @@
 
 .mid-label{
   font-size: 14px;
+}
+
+.msg-visa{
+  color: rgb(155, 155, 155);
+  display: none;
+  margin-left: 17px;
+  margin-bottom: 15px;
+}
+
+.code-mc{
+  display: none;
+  margin-left: 14px;
+  font-size: 14px;
+}
+
+.input-mc{
+  display: none;
+  width: 266px;
+  height: 30px;
+  border: 1px solid rgb(204, 204, 204);
+  border-radius: 3%;
+  margin-left: 14px;
+  margin-bottom: 17px;
+
+}
+.msg-mc{
+  display: none;
+  margin-left: 7px;
+  text-align: center;
+  margin-bottom: 16px;
+  color: #808080de;
+  font-weight: bold;
+  margin-right: 8px;
+  font-size: 15px;
+  margin-bottom: 15px;
+}
+.btn-visa{
+  display: none;
+  margin-top: 14px;
+  margin-bottom: 17px;
+  height: 38px;
+  width: 266px;
+  align-self: center;
+  background-color: rgb(141, 122, 255);
+  color: white;
+  border-radius: 3%;
+  font-size: 17px;
+  font-weight: bold;
+}
+.msg2-mc{display: none; color: rgb(155, 155, 155); margin-left: 17px; margin-bottom: 15px;}
+
+.msg-amex{display: none; color: rgb(155, 155, 155); margin-left: 17px; margin-bottom: 15px;}
+
+input[type="radio"] {
+  display: none;
+}
+
+input[type="radio"] + label:before {
+  content: "";
+  display: inline-block;
+  width: 22px;
+  height: 22px;
+  padding: 4px;
+  margin-right: 5px;
+  background-clip: content-box;
+  border: 2px solid rgb(141, 122, 255);
+  background-color: #e7e6e7;
+  border-radius: 50%;
+}
+
+input[type="radio"]:checked + label:before {
+  background-color: rgb(141, 122, 255);
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: border-box;
+}
+
+.sound-signal label {
+  display: inline-flex;
+  align-items: center;
+}
+
+.cb {
+  display: none;
+}
+label {
+  display: inline-block;
+  position: relative;
+  padding-left: 25px;
+  font-size: 20px;
+  line-height: 20px;
+  margin: 5px;
+}
+label:before {
+  line-height: 20px;
+  content: "";
+  display: inline-block;
+  width: 19px;
+  height: 19px;
+  position: absolute;
+  left: 0;
+  background-color: #ffffff;
+  border: 2px solid rgb(141, 122, 255);
+  margin-top: -9px;
+}
+input[type=checkbox]:checked + label:before,
+label:hover:before {
+  content: "\2713";
+  color: white;
+  text-align: center;
+  line-height: 16px;
+  background-color: rgb(141, 122, 255);
 }

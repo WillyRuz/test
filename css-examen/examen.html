@@ -2,35 +2,75 @@
 <html>
 <head>
   <link rel="stylesheet" type="text/css" href="examen.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
   <title></title>
 </head>
 <body>
-  <script type="text/javascript">
+  <script>
     function visa(){
+      const msgVisa = document.getElementById("msg-visa");
+      const btnVisa = document.getElementById("btn-visa");
       
+      if(msgVisa.style.display === "none" && btnVisa.style.display === "none") {
+        msgVisa.style.display = "block";
+        btnVisa.style.display = "block";
+      }else{
+        msgVisa.style.display = "none";
+        btnVisa.style.display = "none";
+      }
     }
 
-    function mastercard(){
-
+    function mastercard(){ 
+      const codeMC = document.getElementById("code-mc");
+      const inputMC = document.getElementById("input-mc");
+      const msgMC = document.getElementById("msg-mc");
+      const btnVisa = document.getElementById("btn-visa");
+      const msg2MC = document.getElementById("msg2-mc");
+      
+      if(codeMC.style.display === "none" && inputMC.style.display === "none" && msgMC.style.display === "none" && btnVisa.style.display === "none" && msg2MC.style.display === "none") {
+        codeMC.style.display = "block";
+        inputMC.style.display = "block";
+        msgMC.style.display = "block";
+        btnVisa.style.display = "block";
+        msg2MC.style.display = "block";
+        
+      }else{
+        codeMC.style.display = "none"; 
+        inputMC.style.display = "none";
+        msgMC.style.display = "none"; 
+        btnVisa.style.display = "none";
+        msg2MC.style.display = "none"; 
+      }
     }
 
     function amex(){
-
+      const msgAmex = document.getElementById("msg-amex");
+      const btnVisa = document.getElementById("btn-visa");
+      
+      if(msgAmex.style.display === "none" && btnVisa.style.display === "none") {
+        msgAmex.style.display = "block";
+        btnVisa.style.display = "block";
+      }else {
+        msgAmex.style.display = "none";
+        btnVisa.style.display = "none";
+      }
     }
-
   </script>
-    <div class="main-container">
-      <div class="title">Elige tu forma de pago</div>
+  <div class="main-container">
+    <div class="title">Elige tu forma de pago</div>
+    <div class="top-container">
+      <div class="payment">
+        <input type="radio" id="soundsignal1" name="radio-pago" checked="checked">
+        <label for="soundsignal1"></label>
+        <div>Tarjeta de crédito o débito</div>
+      </div>
+      <div class="brand">
+        <a class="image1" onclick="visa();"><img class="img1" src="visa.png"></a>
+        <a class="image2" onclick="mastercard();"><img class="img2" src="mastercard.png"></a>
+        <a class="image3" onclick="amex();"><img class="img3" src="amex.png"></a>
+      </div>
+    </div>  
       <div class="container-border">
-        <div class="payment">
-          <div><img src="dot.png"></div>
-          <div>Tarjeta de crédito o débito</div>
-        </div>
-        <div class="brand">
-          <div class="image1" onclick="visa();"><img src="visa.png"></div>
-          <div class="image2" onclick="mastercard();"><img src="mastercard.png"></div>
-          <div class="image3" onclick="amex();"><img src="amex.png"></div>
-        </div>
         <div class="line">
           <div class="label">Nombre completo</div>
           <div><input class="inpt2" type="text" name="name" placeholder="Nombre"></div>
@@ -38,27 +78,34 @@
         <div class="mid-container">
           <div class="mid-content">
             <div class="mid-label">Vigencia</div>
-            <div class="inpt"><input class="inpt" type="text" name="date" placeholder="mm/aa"></div>
+            <div><input class="inpt" type="text" name="date" placeholder="mm/aa"></div>
           </div>
           <div class="mid-content">
-           <div class="mid-label">CVC</div>
-            <div class="inpt1"><input class="inpt" type="text" name="cvc" placeholder="_"></div>
+          <div class="mid-label">CVC</div>
+            <div><input class="inpt" type="text" name="cvc" placeholder="___"></div>
           </div>
         </div>
         <div class="line">
           <div class="label">Número tarjeta</div>
-          <div><input class="inpt2" type="text" name="card_number" placeholder="_______"></div>
+          <div><input class="inpt2" type="text" name="card_number" placeholder="________________"></div>
         </div>
         <div class="line">
           <div class="label">Código postal</div>
           <div><input class="inpt2" type="text" name="postal_Code" placeholder="_____"></div>
         </div>
+        <div id="code-mc" class="code-mc">¿Tienes un código MasterCard? escríbelo aquí</div>
+        <input id="input-mc" class="input-mc" type="text" name="mc-codigo">
+        <div id="msg-mc" class="msg-mc">Utiliza el código HOMIEMC al pagar con tu tarjeta MASTERCARD y recibe beneficios exclusivos.</div>
         <div class="bottom">
-          <input type="checkbox" name="save_card">
-          <div>Guardar tarjeta</div>
+          <input type="checkbox" class="cb"  id="check1">
+          <label for="check1"></label>
+          <div class="save-card">Guardar tarjeta en cuenta</div>
         </div>
-      </div>  
-    </div>
-
+        <button id="btn-visa" class="btn-visa">Pagar</button>
+        <div id="msg-visa" class="msg-visa">* Se cobrará el 2.5% por comisión</div>
+        <div id="msg2-mc" class="msg2-mc">* Se cobrará el 2.65% por comisión</div>
+        <div id="msg-amex" class="msg-amex">* Se cobrará el 3.65% por comisión</div>
+    </div>  
+  </div>
 </body>
 </html>
