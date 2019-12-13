@@ -10,6 +10,7 @@
 
   <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.19.0/axios.min.js"></script>
   <script type="text/javascript">
+    
     function getMovie(){
       const type = document.getElementById('movie_name').value;
       const queryURL = "http://www.omdbapi.com/?t=" + type + "&y=&plot=short&apikey=40e9cece";
@@ -24,16 +25,17 @@
       })
       let title = response.data.Title;
       const error = "Movie does not exist";
+      document.getElementById("js-table").innerHTML="";
+      let errormsg = document.getElementById('js-table');
+      let movie = document.getElementById('js-table');
+      let year = document.getElementById('js-table');
+      let actors = document.getElementById('js-table');
       if (typeof title === "undefined") {
-        let movie = document.getElementById('js-table');
-        movie.insertAdjacentHTML('beforeend', '<td><br>'+ error +'</td>')
+        errormsg.insertAdjacentHTML('beforeend', '<td><br>'+ error +'</td>');
       }else{
-        let movie = document.getElementById('js-table');
-        movie.insertAdjacentHTML('beforeend', '<td>'+ title +'</td>')
-        let year = document.getElementById('js-table');
-        year.insertAdjacentHTML('beforeend', '<td>'+ response.data.Year +'</td>')
-        let actors = document.getElementById('js-table');
-        actors.insertAdjacentHTML('beforeend', '<td>'+ response.data.Actors +'</td>')
+        movie.insertAdjacentHTML('beforeend', '<td">'+ title +'</td>');
+        year.insertAdjacentHTML('beforeend', '<td>'+ response.data.Year +'</td>');
+        actors.insertAdjacentHTML('beforeend', '<td>'+ response.data.Actors +'</td>');
       }})()
     };
   </script>
